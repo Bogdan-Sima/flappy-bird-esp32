@@ -1,82 +1,90 @@
-# Flappy Bird pe ESP32 
+# Flappy Bird on ESP32
 
+## Description
 
-## Descriere
-Am realizat un joc simplu de tip Flappy Bird folosind un ESP32 și un display OLED. Jocul funcționează prin apăsarea unui buton pentru a controla pasărea și a evita obstacolele.
+I developed a simple Flappy Bird-style game using an ESP32 and an OLED display. The game is controlled via a button that allows the player to navigate the bird and avoid obstacles.
 
-Proiectul m-a ajutat să înțeleg mai bine cum funcționează un sistem embedded (interacțiune hardware + software).
-
----
-
-## Tehnologii folosite
-- ESP32  
-- Arduino (C/C++)  
-- Display OLED SSD1306  
-- Breadboard  
-- Buzzer  
-- Buton  
+This project helped me gain a better understanding of embedded systems, particularly the interaction between hardware and software components.
 
 ---
 
-## Ce face jocul
-- controlezi pasărea cu un buton  
-- apar obstacole generate random  
-- scorul crește când treci de obstacole  
-- jocul se termină dacă lovești un obstacol sau ieși din ecran  
-- există sunet la apăsare și la game over  
+## Technologies Used
+
+* ESP32
+* Arduino (C/C++)
+* OLED Display (SSD1306)
+* Breadboard
+* Buzzer
+* Push Button
 
 ---
 
-## Cum funcționează (pe scurt)
-Pasărea se mișcă în sus când apeși butonul și cade în jos din cauza „gravitației” (simulată în cod). Obstacolele se deplasează din dreapta spre stânga și au poziții random.
+## Features
+
+* Control the bird using a button
+* Randomly generated obstacles
+* Score increases when passing obstacles
+* Game over when hitting an obstacle or leaving the screen
+* Audio feedback for button press and game over
 
 ---
 
-## Conexiuni hardware
+## How It Works (Overview)
 
-### OLED
-- GND → GND  
-- VCC → 3.3V  
-- SCL → GPIO 22  
-- SDA → GPIO 21  
+The bird moves upward when the button is pressed and falls downward due to simulated gravity. Obstacles move from right to left with randomized positions.
+
+---
+
+## Hardware Connections
+
+### OLED Display
+
+* GND → GND
+* VCC → 3.3V
+* SCL → GPIO 22
+* SDA → GPIO 21
 
 ---
 
 ### Buzzer
-- Pin lung → GPIO 23  
-- Pin scurt → GND  
+
+* Positive pin → GPIO 23
+* Negative pin → GND
 
 ---
 
-### Buton
-- Un pin → GPIO 4  
-- Celălalt → GND  
+### Push Button
 
-(butonul folosește INPUT_PULLUP, nu am pus rezistență externă)
+* One pin → GPIO 4
+* Other pin → GND
 
----
-
-## Cum rulezi
-1. Deschizi proiectul în Arduino IDE  
-2. Selectezi placa ESP32  
-3. Încarci codul  
-4. Apeși butonul și începi jocul  
+(The button uses INPUT_PULLUP, no external resistor required)
 
 ---
 
-## Structură proiect
-flappy_bird_esp32.ino
-images.h
-fontovi.h
+## How to Run
+
+1. Open the project in Arduino IDE
+2. Select the ESP32 board
+3. Upload the code
+4. Press the button to start the game
 
 ---
 
-## Observații
-Am pornit de la un proiect open-source (realizat de Volos Projects) și l-am adaptat (hardware + modificări în cod) pentru a funcționa pe setup-ul meu.
+## Project Structure
+
+* flappy_bird_esp32.ino
+* images.h
+* fontovi.h
 
 ---
 
-## Autor
+## Notes
+
+This project was based on an open-source implementation (Volos Projects), which I adapted both in terms of hardware and software to fit my setup.
+
+---
+
+## Author
+
 Bogdan Sima
-
-
